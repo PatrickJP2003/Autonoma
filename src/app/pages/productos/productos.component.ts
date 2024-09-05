@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import {  Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Producto } from '../home/utils/producto';
-import * as productoData from '../../../../public/json/productoData.json';
 import { ProductosService } from '../../services/productos/productos.service';
 
 @Component({
