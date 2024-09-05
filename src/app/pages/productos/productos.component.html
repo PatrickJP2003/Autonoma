@@ -1,14 +1,19 @@
-<div class="background-overlay">
-<div class="container-fluid text-center">
-  <div class="d-flex flex-wrap">
-    <div *ngFor="let producto of productos" class="card" style="width: 18rem;">
+<div *ngIf="productos.length > 0; else noProducts" class="background-overlay">
+  <div class="container-fluid text-center">
+    <div class="d-flex flex-wrap">
+      <div *ngFor="let producto of productos" class="card m-2" style="width: 18rem;">
         <img [src]="producto.imagen" class="card-img-top" [alt]="producto.nombre">
         <div class="card-body">
-          <h5 class="card-title">{{producto.nombre}}</h5>
-          <p class="card-text">{{producto.descripcion}}</p>
+          <h5 class="card-title">{{ producto.nombre }}</h5>
+          <p class="card-text">{{ producto.descripcion }}</p>
+          <p class="card-text">Precio: {{ producto.precio }}</p>
           <a class="btn btn-primary" (click)="onClickProducto(producto)">Mostrar Información</a>
         </div>
       </div>
+    </div>
   </div>
 </div>
-</div>
+
+<ng-template #noProducts>
+  <p>No hay productos disponibles.</p>
+</ng-template>

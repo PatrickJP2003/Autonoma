@@ -3,6 +3,7 @@ import {  Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { Producto } from '../home/utils/producto';
 import * as productoData from '../../../../public/json/productoData.json';
+import { ProductosService } from '../../services/productos/productos.service';
 
 @Component({
   selector: 'app-productos',
@@ -12,11 +13,15 @@ import * as productoData from '../../../../public/json/productoData.json';
   styleUrls: ['./productos.component.css']
 })
 export class ProductosComponent {
-  productos: Producto[] = (productoData as any).default;
+  productos: any[] = [];
 
-  constructor(private router: Router) {}
+  constructor(private router: Router,private productosService: ProductosService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.productosService.getProductos().subscribe(data => {
+      this.productos = data;
+    });
+  }
 
   onClickProducto(producto: Producto): void {
     this.router.navigate(['/producto', producto.id]);
