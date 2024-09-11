@@ -1,209 +1,192 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #f0f0f0;
-    background-color: #121212; /* Fondo más oscuro para un contraste elegante */
-    margin: 0;
-    padding: 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-/* Estilos para el contenedor de la imagen principal */
-/* Asegúrate de que el contenedor de las imágenes esté centrado */
-.container-fluid.text-center {
-    display: flex;
-    justify-content: center; /* Centra el contenido horizontalmente */
+body {
+  font-family: "Open Sans", sans-serif;
+  background: url('https://img1.wallspic.com/crops/0/6/7/2/4/142760/142760-rojo-luz-fila-llamarada_de_la_lente-espacio-6080x3420.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  line-height: 1.6;
+  padding-top: 70px; /* Ajusta este valor según la altura de tu navbar */
+}
+
+.container-fluid.p-0.mb-5 {
+  margin-top: -40px; /* Ajusta este valor para subir más el primer carrusel */
 }
 
 .row {
-    display: flex;
-    justify-content: center; /* Centra las columnas horizontalmente */
+  display: flex;
+  justify-content: center;
 }
 
 .image-container {
-    display: flex;
-    justify-content: center; /* Centra el contenido dentro del contenedor */
-    align-items: center; /* Alinea verticalmente si es necesario */
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .fixed-size {
-    width: 100%;
-    height: 400px; /* Ajusta esta altura según tus necesidades */
-    object-fit: cover;
-    border-radius: 12px; /* Bordes redondeados */
-}
-
-
-.image-container {
-    position: relative;
-    overflow: hidden;
-    border-radius: 12px; /* Bordes redondeados para un look más sofisticado */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
 .image-container img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Mantiene las proporciones de la imagen */
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Fondo ligeramente más transparente */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    border-radius: 12px; /* Asegura que el overlay tenga bordes redondeados */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 12px;
 }
 
 .image-container:hover .overlay {
-    opacity: 1;
+  opacity: 1;
 }
 
 .overlay h2 {
-    color: #f0f0f0;
-    font-size: 22px;
-    text-transform: uppercase;
-    font-weight: 600;
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
-/* Estilos para los encabezados */
 h1 {
-    font-size: 2.5rem; /* Tamaño más moderado y elegante */
-    font-weight: 700;
-    margin-bottom: 40px;
-    color: #009688; /* Color verde suave para un look más moderno */
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #009688;
 }
 
-/* Estilos para el carrusel */
-/* Estilos para el carrusel */
-/* Estilos para el carrusel */
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
 .carousel-inner {
-    border-radius: 8px; /* Bordes redondeados */
-    overflow: hidden; /* Ocultar cualquier contenido que se salga */
-}
-
-.carousel-item img {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-    transition: opacity 0.5s ease; /* Transición suave para el cambio de imagen */
-}
-
-.carousel-caption {
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 15px 25px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Sombra sutil para la caption */
+  position: relative;
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
-    filter: invert(1);
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Estilos para el botón */
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 0;
+  text-align: center;
+}
+
+h5 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  margin: 10px 0;
+}
+
+.ng-template h5 {
+  color: #FF0032;
+}
+
+.carousel-container {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.carousel-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.carousel-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #000;
+}
+
+.carousel-image-container {
+  flex: 1;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+
+.carousel-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.carousel-description {
+  flex: 2;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.carousel-description button {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
 .btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
-    padding: 12px 24px;
-    font-size: 18px;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    transition: background-color 0.3s ease, border-color 0.3s ease;
+  background-color: #E0144C;
+  color: #fff;
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #004494;
-}
-
-/* Estilos para los títulos */
-h1 {
-    color: #000000;
-    font-weight: 300;
-    margin-bottom: 20px;
-}
-
-h2 {
-    color: #000000;
-    font-weight: 500;
-}
-
-/* Estilos de separación */
-.my-4 {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-
-.mb-5 {
-    margin-bottom: 4rem;
-}
-
-.mt-5 {
-    margin-top: 4rem;
-}
-
-/* Estilos para el botón */
-.btn-primary {
-    background-color: #6f00ff; /* Color verde suave para el botón */
-    border: none;
-    padding: 12px 24px;
-    font-size: 1.125rem;
-    border-radius: 6px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    display: inline-block;
-    margin-top: 20px;
-}
-
-.btn-primary:hover {
-    background-color: #00796b; /* Color verde más oscuro al pasar el cursor */
-    transform: scale(1.05);
-}
-
-/* Estilos adicionales */
-.carousel-item {
-    position: relative;
-    text-align: center;
-}
-
-/* Estilos para imágenes de carrusel fijas */
-.fixed-size {
-    width: 100%;
-    height: 400px; /* Ajusta esta altura según tus necesidades */
-    object-fit: cover;
-    border-radius: 12px; /* Bordes redondeados */
-}
-
-/* Media queries para mejorar la responsividad */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 1.75rem;
-    }
-
-    .btn-primary {
-        font-size: 1rem;
-    }
-
-    .carousel-control-prev,
-    .carousel-control-next {
-        width: 7%;
-    }
-
-    .carousel-caption h5 {
-        font-size: 1rem;
-    }
+  background-color: #BF002B;
 }

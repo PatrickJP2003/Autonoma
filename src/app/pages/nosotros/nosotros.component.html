@@ -1,38 +1,40 @@
-<div class="container my-5">
-  <section id="historia" class="mb-5">
-    <h2>Nuestra Historia</h2>
-    <p>
-      Fundada en 2019, nuestra empresa ha sido un pionero en el desarrollo de videojuegos innovadores. Desde nuestros primeros títulos hasta los más recientes, hemos estado a la vanguardia en entretenimiento interactivo, ofreciendo experiencias únicas para jugadores de todas partes del mundo.
-    </p>
-  </section>
+<body>
+  <div class="container my-5">
+    <section id="historia" class="mb-5">
+      <h2>Nuestra Historia</h2>
+      <p>
+        Fundada en 2019, nuestra empresa ha sido un pionero en el desarrollo de videojuegos innovadores. Desde nuestros primeros títulos hasta los más recientes, hemos estado a la vanguardia en entretenimiento interactivo, ofreciendo experiencias únicas para jugadores de todas partes del mundo.
+      </p>
+    </section>
 
-  <section id="mision" class="mb-5">
-    <h2>Misión</h2>
-    <p>
-      Nuestra misión es crear videojuegos que desafíen los límites de la creatividad y la tecnología. Nos esforzamos por ofrecer experiencias inmersivas y emocionantes que conecten a los jugadores y les permitan explorar mundos fascinantes.
-    </p>
-  </section>
+    <section id="mision" class="mb-5">
+      <h2>Misión</h2>
+      <p>
+        Nuestra misión es crear videojuegos que desafíen los límites de la creatividad y la tecnología. Nos esforzamos por ofrecer experiencias inmersivas y emocionantes que conecten a los jugadores y les permitan explorar mundos fascinantes.
+      </p>
+    </section>
 
-  <section id="vision" class="mb-5">
-    <h2>Visión</h2>
-    <p>
-      Visualizamos un futuro donde nuestros juegos sean reconocidos globalmente por su innovación y calidad. Queremos ser líderes en la industria del videojuego, estableciendo nuevos estándares y creando experiencias memorables para todos nuestros jugadores.
-    </p>
-  </section>
+    <section id="vision" class="mb-5">
+      <h2>Visión</h2>
+      <p>
+        Visualizamos un futuro donde nuestros juegos sean reconocidos globalmente por su innovación y calidad. Queremos ser líderes en la industria del videojuego, estableciendo nuevos estándares y creando experiencias memorables para todos nuestros jugadores.
+      </p>
+    </section>
 
-  <section id="ejecutivos">
-    <h2>Conoce a Nuestro Equipo</h2>
-    <div class="row">
-      <div *ngFor="let equipo of equipos" class="col-md-4 mb-4" >
-        <div class="card">
-          <img [src]="equipo.imagen" class="card-img-top" [alt]="equipo.nombre">
-          <div class="card-body">
-            <h5 class="card-title">{{ equipo.nombre }}</h5>
-            <p class="card-text">{{ equipo.cargo }}</p>
-            <p class="card-text">{{ equipo.descripcion }}</p>
+    <section id="ejecutivos">
+      <h2>Conoce a Nuestro Equipo</h2>
+      <div class="row">
+        <div *ngFor="let equipo of equipos" class="col-md-4 mb-4">
+          <div class="card">
+            <img [src]="equipo.imagen" class="card-img-top" [alt]="equipo.nombre">
+            <div class="card-body">
+              <h5 class="card-title">{{ equipo.nombre }}</h5>
+              <p class="card-text">{{ equipo.cargo }}</p>
+              <p class="card-text">{{ equipo.descripcion }}</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-</div>
+    </section>
+  </div>
+  </body>

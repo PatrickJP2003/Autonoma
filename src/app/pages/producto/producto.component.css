@@ -66,15 +66,15 @@ body {
     background-color: #6f00ff; /* Color verde más oscuro al pasar el cursor */
     transform: scale(1.05);
 }
-.background-overlay { 
-    background-image: url('https://img.freepik.com/vector-gratis/fondo-particulas-tecnologia-realista-abstracta_52683-33064.jpg'); /* Replace with your background image URL */ 
-    background-size: cover; 
-    background-position: center; 
-    background-attachment: fixed; 
-    height: 100vh; 
-    width: 100%; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
+.background-overlay {
+    background-image: url('https://img.freepik.com/vector-gratis/fondo-luz-neon-degradado_23-2149332915.jpg'); /* Replace with your background image URL */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 

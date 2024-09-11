@@ -11,14 +11,13 @@
       "nombre": "Patrich Sanchez",
       "cargo": "Director de Desarrollo de Juegos",
       "descripcion": "Patrick supervisa el proceso creativo y técnico de nuestros juegos, asegurando que cada título cumpla con los más altos estándares de calidad y diversión.",
-      "imagen": "imagenes/eje2.jpg"
+      "imagen": "imagenes/JP ).jpg "
     },
     {
       "id": 3,
       "nombre": "Stalin Moposita",
       "cargo": "Director de Marketing",
-      "descripcion": "Stalin es el encargado de llevar nuestros juegos al público. Con una estrategia de marketing innovadora, se asegura de que nuestras creaciones lleguen a todos los rincones del mundo.",
+      "descripcion": "Stalin lidera el marketing, garantizando que nuestros juegos alcancen audiencias globales a través de estrategias innovadoras y efectivas",
       "imagen": "imagenes/eje3.jpg"
     }
   ]
-  

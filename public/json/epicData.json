@@ -1,4 +1,4 @@
-[   
+[
 {
     "id":1,
     "nombre":"Gta V",
@@ -21,7 +21,7 @@
     "precio": 100,
     "tipo":3,
     "descripcion":"Juego de futbol",
-    "imagen": "imagenes/fifa.jpg"
+    "imagen": "imagenes/FC25.jpg"
 }
 
 ]

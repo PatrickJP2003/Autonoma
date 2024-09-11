@@ -1,4 +1,4 @@
-<div *ngIf="productos.length > 0; else noProducts" class="background-overlay">
+<div *ngIf="productos.length > 0; " class="background-overlay">
   <div class="container-fluid text-center">
     <div class="d-flex flex-wrap">
       <div *ngFor="let producto of productos" class="card m-2" style="width: 18rem;">
@@ -13,7 +13,3 @@
     </div>
   </div>
 </div>
-
-<ng-template #noProducts>
-  <p>No hay productos disponibles.</p>
-</ng-template>
