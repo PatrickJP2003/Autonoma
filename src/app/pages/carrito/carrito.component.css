@@ -1,0 +1,47 @@
+.carrito-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background: white;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    z-index: 1000;
+  }
+  
+  .carrito-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .carrito-body {
+    flex: 1;
+    overflow-y: auto;
+  }
+  
+  .carrito-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .carrito-item-img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .carrito-item-details {
+    flex: 1;
+  }
+  
+  .carrito-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  

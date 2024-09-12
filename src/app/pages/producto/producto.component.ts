@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { ProductosService } from '../../services/productos/productos.service';
-import { Observable, of } from 'rxjs';
-import { catchError, map } from 'rxjs/operators';
-import { Producto } from '../home/utils/producto'; // Ajusta la ruta
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { Producto } from '../home/utils/producto';
+import { ProductosService } from '../../services/productos/productos.service';
+import { CarritoService } from '../../services/carrito/carrito.service';
+
 
 @Component({
   selector: 'app-producto',
@@ -13,26 +13,26 @@ import { CommonModule } from '@angular/common';
   templateUrl: './producto.component.html',
   styleUrls: ['./producto.component.css']
 })
-export class ProductoComponent implements OnInit {
-  producto$: Observable<Producto | undefined> = of(undefined); // Cambiado a Observable<Producto | undefined>
-  id: number = 0;
+export class ProductoComponent {
+  productos: Producto[] = [];
 
   constructor(
-    private route: ActivatedRoute,
-    private productosService: ProductosService
+    private router: Router,
+    private productosService: ProductosService,
+    private carritoService: CarritoService // Inyecta el servicio de carrito
   ) {}
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe(params => {
-      this.id = +params.get('id')!; // Obtener el id de los parámetros de la ruta
-      this.loadProducto();
+    this.productosService.getProductos().subscribe(data => {
+      this.productos = data;
     });
   }
 
-  private loadProducto(): void {
-    this.producto$ = this.productosService.getProductos().pipe(
-      map(productos => productos.find(p => p.id === this.id)), // Filtrar el producto por id
-      catchError(() => of(undefined)) // Manejo de errores, devuelve undefined en caso de error
-    );
+  onClickProducto(producto: Producto): void {
+    this.router.navigate(['/producto', producto.id]);
+  }
+
+  addToCart(producto: Producto): void {
+    this.carritoService.addToCart(producto); // Añade el producto al carrito y abre la barra lateral
   }
 }

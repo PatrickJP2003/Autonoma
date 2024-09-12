@@ -1,17 +1,15 @@
-<div *ngIf="producto$ | async as producto; else noProduct" class="background-overlay">
+<div *ngIf="productos.length > 0" class="background-overlay">
   <div class="container-fluid text-center">
-    <div class="card" style="width: 18rem; margin: auto;">
-      <img [src]="producto.imagen" class="card-img-top" [alt]="producto.nombre">
-      <div class="card-body">
-        <h5 class="card-title">{{ producto.nombre }}</h5>
-        <p class="card-text">{{ producto.descripcion }}</p>
-        <p class="card-text">Precio: {{ producto.precio }}</p>
-        <button class="btn btn-primary">Comprar</button>
+    <div class="d-flex flex-wrap">
+      <div *ngFor="let producto of productos" class="card m-2" style="width: 18rem;">
+        <img [src]="producto.imagen" class="card-img-top" [alt]="producto.nombre">
+        <div class="card-body">
+          <h5 class="card-title">{{ producto.nombre }}</h5>
+          <p class="card-text">{{ producto.descripcion }}</p>
+          <p class="card-text">Precio: {{ producto.precio | currency }}</p>
+          <button (click)="addToCart(producto)">Añadir al carrito</button>
+        </div>
       </div>
     </div>
   </div>
 </div>
-
-<ng-template #noProduct>
-  <p>No hay productos disponibles.</p>
-</ng-template>

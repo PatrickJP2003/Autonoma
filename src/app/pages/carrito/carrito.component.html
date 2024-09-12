@@ -1,0 +1,21 @@
+<div class="carrito-sidebar" *ngIf="showCart">
+    <div class="carrito-header">
+      <h5>Carrito de Compras</h5>
+      <button class="btn btn-close" (click)="closeCart()">X</button>
+    </div>
+    <div class="carrito-body">
+      <div *ngFor="let item of carritoItems" class="carrito-item">
+        <img [src]="item.imagen" class="carrito-item-img" [alt]="item.nombre">
+        <div class="carrito-item-details">
+          <p>{{ item.nombre }}</p>
+          <p>Precio: {{ item.precio | currency }}</p>
+          <button class="btn btn-danger btn-sm" (click)="removeFromCart(item)">Eliminar</button>
+        </div>
+      </div>
+    </div>
+    <div class="carrito-footer">
+      <p>Total: {{ total | currency }}</p>
+      <button class="btn btn-primary" (click)="buyItems()">Comprar</button>
+    </div>
+  </div>
+  

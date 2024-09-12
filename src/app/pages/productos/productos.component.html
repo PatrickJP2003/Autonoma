@@ -1,4 +1,4 @@
-<div *ngIf="productos.length > 0; " class="background-overlay">
+<div *ngIf="productos.length > 0" class="background-overlay">
   <div class="container-fluid text-center">
     <div class="d-flex flex-wrap">
       <div *ngFor="let producto of productos" class="card m-2" style="width: 18rem;">
@@ -6,7 +6,7 @@
         <div class="card-body">
           <h5 class="card-title">{{ producto.nombre }}</h5>
           <p class="card-text">{{ producto.descripcion }}</p>
-          <p class="card-text">Precio: {{ producto.precio }}</p>
+          <p class="card-text">Precio: {{ producto.precio | currency }}</p>
           <a class="btn btn-primary" (click)="onClickProducto(producto)">Mostrar Información</a>
         </div>
       </div>

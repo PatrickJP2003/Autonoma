@@ -6,6 +6,5 @@ export const permissionsGuard: CanActivateFn = (route, state) => {
 
   const usersService = inject(UsersService);
   
-  return usersService.getCurrenUser() !== null;
-  return true;
+  return usersService.getCurrentUser() !== null;
 };
